@@ -8,18 +8,18 @@ sampler = EmbeddingComposite(DWaveSampler(
 h = {}
 
 J = {
-    (0,4): -1, (0,5): +1, (0,6): -1, (0,7): +1,
-    (1,4): +1, (1,5): -1, (1,7): -1,
-    (2,5): +1, (2,6): -1, (2,7): -1,
-    (3,4): +1, (3,5): -1, (3,6): -1, (3,7): +1,
+    ('Anna','Lisa'): -1, ('Anna','Timo'): +1, ('Anna','Lynn'): -1, ('Anna','Jonas'): +1,
+    ('Tom','Lisa'): +1, ('Tom','Timo'): -1, ('Tom','Jonas'): -1,
+    ('Pia','Timo'): +1, ('Pia','Lynn'): -1, ('Pia','Jonas'): -1,
+    ('Leon','Lisa'): +1, ('Leon','Timo'): -1, ('Leon','Lynn'): -1, ('Leon','Jonas'): +1,
 
-    (4,12): +1, (6,14): +1, (7,15): -1,
+    ('Lisa','Emily'): +1, ('Lynn','Sara'): +1, ('Jonas','Jill'): -1,
 
     # Ersetzen Sie hier "0" durch die korrekten Werte der Koppler
-    (8,12): 0, (8,13): 0, (8,14): 0, (8,15): 0,
-    (9,12): 0, (9,13): 0, (9,14): 0, (9,15): 0,
-    (10,13): 0, (10,14): 0, (10,15): 0,
-    (11,12): 0, (11,13): 0, (11,14): 0, (11,15): 0,
+    ('Eva','Emily'): 0, ('Eva','Ben'): 0, ('Eva','Sara'): 0, ('Eva','Jill'): 0,
+    ('Luis','Emily'): 0, ('Luis','Ben'): 0, ('Luis','Sara'): 0, ('Luis','Jill'): 0,
+    ('Jan','Ben'): 0, ('Jan','Sara'): 0, ('Jan','Jill'): 0,
+    ('Nils','Emily'): 0, ('Nils','Ben'): 0, ('Nils','Sara'): 0, ('Nils','Jill'): 0,
 }
 
 response = sampler.sample_ising(
