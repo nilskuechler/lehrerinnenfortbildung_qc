@@ -28,3 +28,4 @@ response = sampler.sample_ising(
     num_reads=1000,
 )
 dwave.inspector.show(response)
+print(response)
