@@ -1,4 +1,4 @@
-from dwave.system import DWaveSampler
+from dwave.system import DWaveSampler, EmbeddingComposite
 import dwave.inspector
 
 sampler = EmbeddingComposite(DWaveSampler(
